@@ -12,7 +12,6 @@ function build(precision::Int, isWindows::Bool)::Nothing
 end
 
 if !ispath("./QuEST") || isempty(readdir("./QuEST"))
-    println("Is empty!")
 
     if Symbol("x86_64") == arch && Sys.isunix()
         build(2, false)
